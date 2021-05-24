@@ -1,0 +1,60 @@
+{
+  "name": "todo-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "NODE_ENV=production tsc",
+    "dev": "NODE_ENV=development ts-node-dev -r tsconfig-paths/register src/index.ts --respawn --pretty --transpile-only src/index.ts",
+    "format": "prettier --write 'src/**/*.{js,ts}' && prettier-eslint --eslint-config-path --list-different '.eslintrc.js' --write 'src/**/*.{js,ts}' LOG_LEVEL=trace",
+    "lint": "eslint -c './.eslintrc.js' --fix './src/**/*.{js,ts}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egoshift/todo-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/egoshift/todo-api/issues"
+  },
+  "homepage": "https://github.com/egoshift/todo-api#readme",
+  "devDependencies": {
+    "@types/cors": "^2.8.10",
+    "@types/debug": "^4.1.5",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.11",
+    "@types/helmet": "^4.0.0",
+    "@types/node": "^15.6.0",
+    "@types/pino": "^6.3.8",
+    "@types/pino-http": "^5.4.1",
+    "@types/pino-pretty": "^4.7.0",
+    "@typescript-eslint/eslint-plugin": "^4.24.0",
+    "@typescript-eslint/parser": "^4.24.0",
+    "debug": "^3.2.7",
+    "eslint": "^7.26.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.0",
+    "ts-node": "^9.1.1",
+    "ts-node-dev": "^1.1.6",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.2.4"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint --fix --quiet",
+      "git add -u",
+      "pretty-quick --staged"
+    ]
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "pino": "^6.11.3",
+    "pino-http": "^5.5.0",
+    "pino-pretty": "^4.8.0"
+  }
+}

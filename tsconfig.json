@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "dist",
+    "rootDir": "src",
+    "strict": true,
+    "moduleResolution": "node", 
+    "baseUrl": "src",
+    "paths": {
+      "@logger": ["logger/index"],
+      "controllers/*": ["controllers/*"],
+      "routes/*": ["routes/*"],
+      "middlewares/*": ["middlewares/*"]
+    },
+    "esModuleInterop": true,
+  },
+  "include": [
+    "src/**/*.ts",
+    "tests/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
+}
