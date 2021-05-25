@@ -30,6 +30,7 @@
     "@types/pino": "^6.3.8",
     "@types/pino-http": "^5.4.1",
     "@types/pino-pretty": "^4.7.0",
+    "@types/yup": "^0.29.11",
     "@typescript-eslint/eslint-plugin": "^4.24.0",
     "@typescript-eslint/parser": "^4.24.0",
     "debug": "^3.2.7",
@@ -55,6 +56,7 @@
     "helmet": "^4.6.0",
     "pino": "^6.11.3",
     "pino-http": "^5.5.0",
-    "pino-pretty": "^4.8.0"
+    "pino-pretty": "^4.8.0",
+    "yup": "^0.32.9"
   }
 }
