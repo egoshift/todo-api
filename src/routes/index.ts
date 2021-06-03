@@ -1,9 +1,12 @@
 import { Router } from 'express'
 
-import HealthCheckRouter from 'middlewares/HealthCheck'
+import HealthCheckMiddleware from 'middlewares/HealthCheck'
+
+import TaskRouter from './Task'
 
 const AppRouter = Router()
 
-AppRouter.use('/healthcheck', HealthCheckRouter)
+AppRouter.use('/healthcheck', HealthCheckMiddleware)
+AppRouter.use('/task', TaskRouter)
 
 export default AppRouter

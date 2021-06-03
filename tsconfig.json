@@ -9,6 +9,7 @@
     "baseUrl": "src",
     "paths": {
       "@logger": ["logger/index"],
+      "@config/*": ["config/*"],
       "controllers/*": ["controllers/*"],
       "routes/*": ["routes/*"],
       "middlewares/*": ["middlewares/*"]
