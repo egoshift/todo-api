@@ -12,7 +12,10 @@
       "@config/*": ["config/*"],
       "controllers/*": ["controllers/*"],
       "routes/*": ["routes/*"],
-      "middlewares/*": ["middlewares/*"]
+      "middlewares/*": ["middlewares/*"],
+      "types/*": ["types/*"],
+      "services/*": ["services//*"],
+      "library/*": ["library/*"]
     },
     "esModuleInterop": true,
   },

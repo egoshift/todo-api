@@ -1,17 +1,7 @@
-import { firestore } from 'models/Base/Firestore.model'
-import { Request, Response } from 'express'
+import Model from 'models/Model'
 
-export async function fetch() {
-  const snapshot = await firestore.collection('tasks').get()
-  const tasks: Array<{}> = []
-
-  if (snapshot.empty)
-    return []  
-  
-  snapshot.forEach(document => {
-    const [data, id] = [ document.data(), document.id ]
-    tasks.push({...data, id})
-  })
-
-  return tasks
+type Task = Model & {
+  task: string
 }
+
+export default Task

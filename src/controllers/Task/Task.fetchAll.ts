@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import * as TaskModel from 'models/Task/Task.model'
+import * as TaskModel from 'services/TaskService'
 
 export default async function fetchAll (request: Request, response: Response) {
 
