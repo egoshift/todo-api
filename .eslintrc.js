@@ -1,8 +1,8 @@
 module.exports = {
   env: {
+    node: true,
     browser: true,
     commonjs: true,
-    // 'es2021': true
   },
   extends: 'eslint:recommended',
   parserOptions: {
@@ -11,6 +11,5 @@ module.exports = {
   },
   rules: {
     quotes: [2, 'single', { avoidEscape: true }],
-    // 'semi': ['always']
   },
 }
