@@ -1,9 +1,9 @@
 import dotenv from 'dotenv'
-import knexconfig from '../../knexfile'
+import knexfile from '../../knexfile'
 
 dotenv.config()
 
 const environment = process.env.ENVIRONMENT || 'development'
-const config = knexconfig[environment]
+const knexconfig = knexfile[environment]
 
-export default config
+export default knexconfig

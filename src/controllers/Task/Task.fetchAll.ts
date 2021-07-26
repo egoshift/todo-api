@@ -1,8 +1,8 @@
 import { Request, Response } from 'express'
-import * as TaskModel from 'services/TaskService'
+import * as TaskService from 'services/TaskService'
 
 export default async function fetchAll (request: Request, response: Response) {
 
-  response.send(await TaskModel.fetch())
+  response.send(await TaskService.fetch())
 
 }

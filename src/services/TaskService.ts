@@ -1,16 +1,7 @@
-import { Request, Response } from 'express'
+import { knex } from 'services/Service'
 
 export async function fetch() {
-  // const snapshot = await firestore.collection('tasks').get()
-  // const tasks: Array<{}> = []
+  const result = await knex.select().from('tasks')
 
-  // if (snapshot.empty)
-  //   return []  
-  
-  // snapshot.forEach(document => {
-  //   const [data, id] = [ document.data(), document.id ]
-  //   tasks.push({...data, id})
-  // })
-
-  // return tasks
+  return result
 }
