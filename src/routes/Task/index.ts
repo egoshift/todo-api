@@ -7,5 +7,6 @@ const TaskRouter = Router()
 TaskRouter.get('/', TaskController.read)
 TaskRouter.post('/new', TaskMiddleware, TaskController.create)
 TaskRouter.put('/update', TaskMiddleware, TaskController.update)
+TaskRouter.delete('/remove', TaskMiddleware, TaskController.remove)
 
 export default TaskRouter

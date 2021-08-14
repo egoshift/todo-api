@@ -26,3 +26,13 @@ export async function update({ id, ...task }: Task) {
     throw new Error(error)
   }
 }
+
+export async function remove({ id }: Task) {
+  try {
+    const result = await knex('tasks').update({ deleted: true }).where({ id })
+
+    return result
+  } catch (error) {
+    throw new Error(error)
+  }
+}
